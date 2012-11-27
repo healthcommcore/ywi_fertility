@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>OsJoomla Access</name>
+	<author>OsJoomla</author>
+	<creationDate>Nov 2008</creationDate>
+	<copyright>(C) 2008 OSJoomla Solution! All rights reserved.</copyright>
+	<license>OsJoomla Solution</license>
+	<authorEmail>infortechcom@gmail.com</authorEmail>
+	<authorUrl>www.joomseller.com</authorUrl>
+	<version>1.0</version>
+	<description>
+		OJAccess Content Plugin
+		Code:
+		{ojaccess guest}shows only to guest users{/ojaccess}
+		{ojaccess !guest}shows to all users who are not a guest{/ojaccess}
+		{ojaccess registered}shows to all users who are registered{/ojaccess}
+		{ojaccess guest,!editor}shows to all guests and members who are NOT editors{/ojaccess}
+		{ojaccess editor,special}shows to editors, administrators, and superadministrators{/ojaccess}
+	</description>
+	<files>
+		<filename plugin="ojaccess">ojaccess.php</filename>
+	</files>
+</install>

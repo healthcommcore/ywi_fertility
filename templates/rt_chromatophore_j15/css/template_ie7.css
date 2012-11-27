@@ -1,0 +1,190 @@
+/**
+ * @version		1.5.4 June 7, 2010
+ * @author		RocketTheme, LLC http://www.rockettheme.com
+ * @copyright 	Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license		http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+/* hack to center align floated slider tabs */
+
+/* font tweaking for optima/lucida font */
+#ff-optima h1,#ff-optima h2,#ff-optima h3,#ff-optima h4,#ff-optima h5,#ff-optima h6,
+#ff-lucida h1,#ff-lucida h2,#ff-lucida h3,#ff-lucida h4,#ff-lucida h5,#ff-lucida h6 {
+	letter-spacing: -0.07em;
+}
+
+body#ff-optima ,
+body#ff-lucida {
+	letter-spacing: -0.03em;
+}
+
+body#ff-georgia,
+body#ff-georgia.f-default {
+	font-size: 15px;
+}
+
+span.pathway {
+	display: block;
+	float: left;
+	line-height: 27px;
+}
+
+span.pathway a {
+	display: block;
+	float: left;
+}
+
+span.pathway img {
+	vertical-align: middle;
+	display: block;
+	float: left;
+}
+
+/* relative fixes */
+
+#page-bg {
+	position: relative;
+	z-index:0;
+	zoom: 1;
+}
+
+#mainbody {
+	position: relative;
+}
+
+/* rokslide fixes */
+
+#moduleslider-size {
+	background-position: 50% 170px;
+}
+
+#rokslide-wrapper {
+	display: inline-block;
+	text-align: center;
+}
+
+#rokslide-wrapper del {
+	display: inline-block;
+}
+
+ul#rokslide-toolbar {
+  display: table;
+  padding: 0;
+}
+
+#rokslide-toolbar li {
+	float: left;
+}
+
+#rokslide-toolbar li span {
+	float: left;
+}
+
+.spacer.w99 .block {
+	width: 99.99%;
+}
+
+.spacer.w49 .block {
+	width: 49.99%;
+}
+
+.spacer.w33 .block {
+	width: 33%;
+}
+
+.spacer.w24 .block {
+	width: 24.9%;
+}
+
+#frame .mmpr-2 .module {
+	width: 49.99%;
+}
+
+#tabmodules div div div {
+	height: 1%;
+}
+
+#rokslide-toolbar span {
+	padding: 0 15px;
+}
+
+/* login fixes */
+
+#sl_vert {
+	zoom: 1;
+}
+
+#sl_submitbutton {
+	top: 28px;
+	right: 20px;
+}
+
+/* other stuff */
+
+#tabmodules {
+	overflow: visible;
+}
+
+#frame .mmpr-2 .module {
+   width: 46%;
+}
+
+#frame .mmpr-3 .module {
+   width: 30%;
+}
+
+td.leftcol .module div div div,
+td.leftcol .module-hilite1 div div div,
+td.leftcol .module-hilite2 div div div,
+td.leftcol .module-hilite3 div div div,
+td.leftcol .module-hilite4 div div div,
+td.leftcol .module-hilite5 div div div,
+td.leftcol .module-clean div div div,
+td.maincol .module div div div,
+td.maincol .module-hilite1 div div div,
+td.maincol .module-hilite2 div div div,
+td.maincol .module-hilite3 div div div,
+td.maincol .module-hilite4 div div div,
+td.maincol .module-hilite5 div div div,
+td.maincol .module-clean div div div,
+td.rightcol .module div div div,
+td.rightcol .module-hilite1 div div div,
+td.rightcol .module-hilite2 div div div,
+td.rightcol .module-hilite3 div div div,
+td.rightcol .module-hilite4 div div div,
+td.rightcol .module-hilite5 div div div,
+td.rightcol .module-clean div div div {
+	height: 1%;
+}
+
+#bottommodules .module div,
+#bottommodules .module-hilite1 div,
+#bottommodules .module-hilite2 div,
+#bottommodules .module-hilite3 div,
+#bottommodules .module-hilite4 div,
+#bottommodules .module div div,
+#bottommodules .module-hilite1 div div,
+#bottommodules .module-hilite2 div div,
+#bottommodules .module-hilite3 div div,
+#bottommodules .module-hilite4 div div,
+#main-shadow2,
+.side-shadow2,
+#bottom-shadow2 {
+	zoom: 1;
+}
+
+.module-credit{padding-right:30px;}
+.module_newmenu{position:relative; left:1px; margin-top:2px;}
+.module-breadcrumb{margin-left:46px;}
+.module_newmenu ul{list-style-image:none; border-right:1px solid #375C99;}
+.module_provider-resourcesmenu ul{list-style-image:none;}
+.module_newmenu ul ul{border-right:none;}
+.module_newmenu li a, .module_providermenu li a{}
+.module-women{margin-left:570px;}
+.homequote{width:140px;}
+.module-search input{padding-top:5px; height:23px;}
+.module-breadcrumb{padding-bottom:2px; padding-top:28px;}
+ul{margin-left:40px;}
+.contentpane ul{margin-left:0; list-style-image:none;}
+.nobullet{list-style-image:none; position:relative;}
+.contentpane form ul .category{margin-left:-15px;}
+fieldset .button, .logout .button{line-height:1em;}

@@ -1,0 +1,46 @@
+/**
+ * @version		1.5.4 June 7, 2010
+ * @author		RocketTheme, LLC http://www.rockettheme.com
+ * @copyright 	Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license		http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+
+#mooRainbow { 
+	font-size: 11px; color: #000; 
+	overflow: hidden;
+}
+
+.moor-box {
+	width: 205px; 
+	height: 150px;
+}
+.moor-overlayBox {
+	width: 144px; /* Width and Height of the overlay must be setted here: default 256x256 */
+	height: 148px; 
+	margin-left: 4px;
+	border: 1px solid #000;
+}
+.moor-slider {
+	border: 1px solid #000;
+	margin-left: 155px;
+	width: 11px; /* if you want a bigger or smaller slider... */
+	height: 148px;
+}
+.moor-cursor {
+	background-image: url(../images/moor_cursor.gif); 
+	width: 8px;
+	height: 8px;
+}
+.moor-arrows {
+	background: url(../images/moor_arrows.gif) top center no-repeat;
+	top: 9px; 
+	left: 152px;
+	width: 19px;
+	height: 5px;
+}
+.moor-chooseColor { /* Top Box Color, the choosen one */
+	margin-left: 173px; 
+	width: 32px; 
+	height: 148px;
+	border: 1px solid #000;
+}

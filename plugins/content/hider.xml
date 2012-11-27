@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - Hider</name>
+	<version>1.50</version>
+	<creationDate>September 2008</creationDate>
+	<author>Dioscouri Design</author>
+	<authorEmail>info@dioscouri.com</authorEmail>
+	<authorUrl>http://www.dioscouri.com</authorUrl>
+	<copyright>2008 Dioscouri.com</copyright>
+	<license>GNU General Public License v2</license>
+	<description>PLUGINDESC</description>
+	
+	<files>
+		<filename plugin="hider">hider.php</filename>	
+	</files>
+	<languages>
+		<language tag="en-GB">site/languages/en-GB.plg_content_hider.ini</language>
+	</languages>	
+</install>

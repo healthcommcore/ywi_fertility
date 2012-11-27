@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<install version="1.5.0" type="plugin" group="system">
+	<name>System - Sourcerer</name>
+	<description>SOURCERER_DESC</description>
+	<version>2.7.0</version>
+	<creationDate>November 2010</creationDate>
+	<author>NoNumber! (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright (C) 2010 NoNumber! All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<files>
+		<filename plugin="sourcerer">sourcerer.php</filename>
+		<folder>sourcerer</folder>
+	</files>
+
+	<!-- Parameters -->
+	<params addpath="/plugins/system/nonumberelements/elements">
+		<param name="@loadlanguage" type="loadlanguage" extension="PLG_SYSTEM_SOURCERER" />
+		<param name="@license" type="license" extension="Sourcerer" />
+		<param name="@version" type="version" extension="Sourcerer" xml="/plugins/system/sourcerer.xml" />
+		<param name="@title" type="title"
+			label="SOURCERER"
+			description="SOURCERER_DESC_LONG"
+			xml="/plugins/system/sourcerer.xml"
+			image="/plugins/system/sourcerer/images/logo.png"
+			image_w="60" image_h="80"
+			url="http://www.nonumber.nl/sourcerer"
+			help_url="http://www.nonumber.nl/sourcerer" />
+
+		<param name="syntax_word" type="text" size="20" default="source" label="SRC_SYNTAX_WORD" description="SRC_SYNTAX_WORD_DESC" />
+		<param name="debug_php" type="radio" default="0" label="SRC_ENABLE_PHP_DEBUGGING" description="SRC_ENABLE_PHP_DEBUGGING_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+		<param name="@slide" type="slide" show_apply="1" label="SRC_SECURITY_SETTINGS_DEFAULT" description="SRC_SECURITY_SETTINGS_DEFAULT_DESC" />
+		<param name="enable_css" type="radio" default="1" label="SRC_ALLOW_CSS_TAGS" description="SRC_ALLOW_CSS_TAGS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+		<param name="@title" type="title" />
+
+		<param name="enable_js" type="radio" default="1" label="SRC_ALLOW_JAVASCRIPT_TAGS" description="SRC_ALLOW_JAVASCRIPT_TAGS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+		<param name="@title" type="title" />
+
+		<param name="enable_php" type="radio" default="1" label="SRC_ALLOW_PHP_TAGS" description="SRC_ALLOW_PHP_TAGS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@toggler" type="toggler" param="enable_php" value="1" />
+			<param name="forbidden_php" type="textarea" rows="3" cols="40" default="dl, escapeshellarg, escapeshellcmd, exec, passthru, popen, proc_close, proc_open, shell_exec, symlink, system" label="SRC_FORBIDDEN_PHP_FUNCTIONS" description="SRC_FORBIDDEN_PHP_FUNCTIONS_DESC" />
+			<param name="forbidden_tags" type="textareaplus" resize="1" width="400" height="80" default="" label="SRC_FORBIDDEN_HTML_TAGS" description="SRC_FORBIDDEN_HTML_TAGS_DESC" />
+		<param name="@toggler" type="toggler" />
+
+
+		<param name="@slide" type="slide" show_apply="1" label="SRC_SECURITY_SETTINGS_ARTICLES" description="SRC_SECURITY_SETTINGS_ARTICLES_DESC" />
+		<param name="articles_enable" type="radio" default="1" label="SRC_ENABLE_IN_ARTICLES" description="SRC_ENABLE_IN_ARTICLES_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@toggler" type="toggler" param="articles_enable" value="1" />
+			<param name="articles_security_level" type="grouplevel" default="21" label="SRC_SECURITY_LEVEL" description="SRC_SECURITY_LEVEL_DESC" />
+
+			<param name="@title" type="title" />
+
+			<param name="articles_enable_css" type="radio" default="-1" label="SRC_ALLOW_CSS_TAGS" description="SRC_ALLOW_CSS_TAGS_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="-1">Default</option>
+			</param>
+			<param name="@toggler" type="toggler" param="articles_enable_css" value="1,-1" />
+				<param name="articles_security_level_css" type="grouplevel" default="23" label="SRC_CSS_SECURITY_LEVEL" description="SRC_CSS_SECURITY_LEVEL_DESC" />
+			<param name="@toggler" type="toggler" />
+
+			<param name="@title" type="title" />
+
+			<param name="articles_enable_js" type="radio" default="-1" label="SRC_ALLOW_JAVASCRIPT_TAGS" description="SRC_ALLOW_JAVASCRIPT_TAGS_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="-1">Default</option>
+			</param>
+			<param name="@toggler" type="toggler" param="articles_enable_js" value="1,-1" />
+				<param name="articles_security_level_js" type="grouplevel" default="23" label="SRC_JAVASCRIPT_SECURITY_LEVEL" description="SRC_JAVASCRIPT_SECURITY_LEVEL_DESC" />
+			<param name="@toggler" type="toggler" />
+
+			<param name="@title" type="title" />
+
+			<param name="articles_enable_php" type="radio" default="-1" label="SRC_ALLOW_PHP_TAGS" description="SRC_ALLOW_PHP_TAGS_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="-1">Default</option>
+			</param>
+			<param name="@toggler" type="toggler" param="articles_enable_php" value="1,-1" />
+				<param name="articles_security_level_php" type="grouplevel" default="25" label="SRC_PHP_SECURITY_LEVEL" description="SRC_PHP_SECURITY_LEVEL_DESC" />
+				<param name="articles_forbidden_php" type="textareaplus" resize="1" width="400" height="80" default="" label="SRC_EXTRA_FORBIDDEN_PHP_FUNCTIONS" description="SRC_EXTRA_FORBIDDEN_PHP_FUNCTIONS_DESC" />
+				<param name="articles_forbidden_tags" type="textareaplus" resize="1" width="400" height="80" default="" label="SRC_EXTRA_FORBIDDEN_HTML_TAGS" description="SRC_EXTRA_FORBIDDEN_HTML_TAGS_DESC" />
+			<param name="@toggler" type="toggler" />
+		<param name="@toggler" type="toggler" />
+
+
+
+		<param name="@slide" type="slide" show_apply="1" label="SRC_SECURITY_SETTINGS_COMPONENTS" description="SRC_SECURITY_SETTINGS_COMPONENTS_DESC" />
+		<param name="components_enable" type="radio" default="1" label="SRC_ENABLE_IN_COMPONENTS" description="SRC_ENABLE_IN_COMPONENTS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@toggler" type="toggler" param="components_enable" value="1" />
+			<param name="components" type="components" default="" admin="0" label="SRC_DISABLE_ON_COMPONENTS" description="SRC_DISABLE_ON_COMPONENTS_DESC" />
+			<param name="@title" type="title" />
+			<param name="components_enable_css" type="radio" default="-1" label="SRC_ALLOW_CSS_TAGS" description="SRC_ALLOW_CSS_TAGS_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="-1">Default</option>
+			</param>
+
+			<param name="@title" type="title" />
+
+			<param name="components_enable_js" type="radio" default="-1" label="SRC_ALLOW_JAVASCRIPT_TAGS" description="SRC_ALLOW_JAVASCRIPT_TAGS_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="-1">Default</option>
+			</param>
+
+			<param name="@title" type="title" />
+
+			<param name="components_enable_php" type="radio" default="-1" label="SRC_ALLOW_PHP_TAGS" description="SRC_ALLOW_PHP_TAGS_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="-1">Default</option>
+			</param>
+			<param name="@toggler" type="toggler" param="components_enable_php" value="1,-1" />
+				<param name="components_forbidden_php" type="textareaplus" resize="1" width="400" height="80" default="" label="SRC_EXTRA_FORBIDDEN_PHP_FUNCTIONS" description="SRC_EXTRA_FORBIDDEN_PHP_FUNCTIONS_DESC" />
+				<param name="components_forbidden_tags" type="textareaplus" resize="1" width="400" height="80" default="" label="SRC_EXTRA_FORBIDDEN_HTML_TAGS" description="SRC_EXTRA_FORBIDDEN_HTML_TAGS_DESC" />
+			<param name="@toggler" type="toggler" />
+
+			<param name="@title" type="title" />
+
+			<param name="@wizard" type="radio" default="0" label="SRC_SHOW_WIZARD">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+			</param>
+			<param name="@toggler" type="toggler" param="@wizard" value="1" />
+				<param name="@title" type="title"
+					label="&#84;&#104;&#101;&#32;&#68;&#97;&#121;&#32;&#111;&#102;&#32;&#116;&#104;&#101;&#32;&#83;&#111;&#117;&#114;&#99;&#101;&#114;&#101;&#114;"
+					description="&#60;&#98;&#114;&#32;/&#62;&#72;&#101;&#32;&#115;&#116;&#97;&#110;&#100;&#115;&#32;&#117;&#112;&#32;&#97;&#110;&#100;&#32;&#104;&#101;&#32;&#119;&#97;&#107;&#101;&#115;,&#60;&#98;&#114;&#32;/&#62;&#72;&#101;&#32;&#97;&#100;&#100;&#115;&#32;&#97;&#110;&#100;&#32;&#104;&#101;&#32;&#116;&#97;&#107;&#101;&#115;,&#60;&#98;&#114;&#32;/&#62;&#72;&#101;&#32;&#109;&#105;&#120;&#101;&#115;&#32;&#97;&#110;&#100;&#32;&#104;&#101;&#32;&#115;&#104;&#97;&#107;&#101;&#115;,&#60;&#98;&#114;&#32;/&#62;&#72;&#101;&#32;&#101;&#120;&#112;&#108;&#111;&#100;&#101;&#115;&#32;&#97;&#110;&#100;&#32;&#104;&#101;&#32;&#98;&#97;&#107;&#101;&#115;,&#60;&#98;&#114;&#32;/&#62;&#66;&#117;&#116;&#32;&#104;&#101;&#32;&#109;&#97;&#107;&#101;&#115;&#32;&#110;&#111;&#32;&#109;&#105;&#115;&#116;&#97;&#107;&#101;&#115;!"
+					image="/plugins/system/sourcerer/images/wizard.gif"
+					image_w="96" image_h="94" />
+			<param name="@toggler" type="toggler" />
+		<param name="@toggler" type="toggler" />
+
+		<param name="@slide" type="slide" show_apply="1" label="SRC_SECURITY_SETTINGS_OTHER_AREAS" description="SRC_SECURITY_SETTINGS_OTHER_AREAS_DESC" />
+		<param name="other_enable" type="radio" default="1" label="SRC_ENABLE_OTHER_AREAS" description="SRC_ENABLE_OTHER_AREAS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@toggler" type="toggler" param="other_enable" value="1" />
+			<param name="@title" type="title" />
+			<param name="other_enable_css" type="radio" default="-1" label="SRC_ALLOW_CSS_TAGS" description="SRC_ALLOW_CSS_TAGS_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="-1">Default</option>
+			</param>
+
+			<param name="@title" type="title" />
+
+			<param name="other_enable_js" type="radio" default="-1" label="SRC_ALLOW_JAVASCRIPT_TAGS" description="SRC_ALLOW_JAVASCRIPT_TAGS_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="-1">Default</option>
+			</param>
+
+			<param name="@title" type="title" />
+
+			<param name="other_enable_php" type="radio" default="-1" label="SRC_ALLOW_PHP_TAGS" description="SRC_ALLOW_PHP_TAGS_DESC">
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="-1">Default</option>
+			</param>
+			<param name="@toggler" type="toggler" param="other_enable_php" value="1,-1" />
+				<param name="other_forbidden_php" type="textareaplus" resize="1" width="400" height="80" default="" label="SRC_EXTRA_FORBIDDEN_PHP_FUNCTIONS" description="SRC_EXTRA_FORBIDDEN_PHP_FUNCTIONS_DESC" />
+				<param name="other_forbidden_tags" type="textareaplus" resize="1" width="400" height="80" default="" label="SRC_EXTRA_FORBIDDEN_HTML_TAGS" description="SRC_EXTRA_FORBIDDEN_HTML_TAGS_DESC" />
+			<param name="@toggler" type="toggler" />
+		<param name="@toggler" type="toggler" />
+
+		<param name="@endspacer" type="title" />
+	</params>
+</install>

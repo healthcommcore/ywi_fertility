@@ -1,0 +1,2 @@
+<?php die("Access Denied"); ?>
+a:2:{s:6:"output";s:0:"";s:6:"result";s:141:"<ul><li access="1" level="1" id="84"><a href="/live_sites/ywi_fertility/index.php/providers"><span><![CDATA[Providers]]></span></a></li></ul>";}

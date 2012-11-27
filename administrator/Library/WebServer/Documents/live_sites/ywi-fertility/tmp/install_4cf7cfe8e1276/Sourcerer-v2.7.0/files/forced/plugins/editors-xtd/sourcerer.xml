@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<install type="plugin" group="editors-xtd" version="1.5">
+	<name>Editor Button - Sourcerer</name>
+	<description>SOURCERER_DESC</description>
+	<version>2.7.0</version>
+	<creationDate>November 2010</creationDate>
+	<author>NoNumber! (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright (C) 2010 NoNumber! All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<files>
+		<filename plugin="sourcerer">sourcerer.php</filename>
+		<folder>sourcerer</folder>
+	</files>
+
+	<!-- Parameters -->
+	<params addpath="/plugins/system/nonumberelements/elements">
+		<param name="@license" type="license" extension="Sourcerer" />
+		<param name="@version" type="version" extension="Sourcerer" xml="/plugins/editors-xtd/sourcerer.xml" />
+		<param name="@dependency" type="dependency"
+			label="SRC_THE_SYSTEM_PLUGIN"
+			file="/plugins/system/sourcerer.php" />
+		<param name="@title" type="title"
+			label="SOURCERER"
+			description="SOURCERER_DESC_LONG"
+			xml="/plugins/editors-xtd/sourcerer.xml"
+			image="/plugins/editors-xtd/sourcerer/images/logo.png"
+			image_w="60" image_h="80"
+			url="http://www.nonumber.nl/sourcerer"
+			help_url="http://www.nonumber.nl/sourcerer" />
+
+		<param name="button_text" type="text" default="Insert Code" label="SRC_BUTTON_TEXT" description="SRC_BUTTON_TEXT_DESC" />
+		<param name="button_icon" type="radio" default="1" label="SRC_SHOW_ICON" description="SRC_SHOW_ICON_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="enable_frontend" type="radio" default="1" label="SRC_ENABLE_IN_FRONTEND" description="SRC_ENABLE_IN_FRONTEND_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+		<param name="@title" type="title" show_apply="1" label="SRC_DEFAULTS" description="SRC_DEFAULTS_DESC" />
+		<param name="addsourcetags" type="radio" default="1" label="SRC_ADD_SOURCE_TAGS" description="SRC_ADD_SOURCE_TAGS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="keepindent" type="radio" default="1" label="SRC_PRESERVE_INDENTATION" description="SRC_PRESERVE_INDENTATION_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="keepcolors" type="radio" default="0" label="SRC_PRESERVE_COLORS" description="SRC_PRESERVE_COLORS_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+		<param name="@title" type="title" show_apply="1" label="SRC_EXAMPLE_CODE" />
+		<param name="use_example_code" type="radio" default="1" label="SRC_USE_EXAMPLE_CODE" description="SRC_USE_EXAMPLE_CODE_DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+			<option value="2">SRC_ONLY_IN_ADMINISTRATOR</option>
+		</param>
+		<param name="@toggler" type="toggler" param="use_example_code" value="1,2" />
+			<param name="example_code" type="textarea" rows="15" cols="55" default="&lt;!-- You can place html anywhere within the source tags -->&lt;br />&lt;br />&lt;br />&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;>&lt;br />    // You can place JavaScript like this&lt;br />    &lt;br />&lt;/script>&lt;br />&lt;?php&lt;br />    // You can place PHP like this&lt;br />    &lt;br />?>" label="SRC_EXAMPLE_CODE" description="SRC_EXAMPLE_CODE_DESC" />
+		<param name="@toggler" type="toggler" />
+
+		<param name="@endspacer" type="title" />
+	</params>
+</install>

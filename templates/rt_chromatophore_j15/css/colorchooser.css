@@ -1,0 +1,230 @@
+/**
+ * @version		1.5.4 June 7, 2010
+ * @author		RocketTheme, LLC http://www.rockettheme.com
+ * @copyright 	Copyright (C) 2007 - 2010 RocketTheme, LLC
+ * @license		http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+ */
+#color-toggle {
+	display: block;
+	position: absolute;
+	right: 40px;
+	width: 159px;
+	height: 34px;
+	top: -2px;
+	background: url(../images/color-chooser.png) 0 0 no-repeat;
+	outline: none;
+}
+
+/* blocks */
+
+#color-chooser #color-selection {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 215px;
+	margin-right: 30px;
+}
+
+#color-chooser #color-picker {
+	float: left;
+	width: 210px;
+	margin-right: 30px;
+}
+
+#color-chooser #preview {
+	float: left;
+	width: 155px;	
+	font-size: 4px;
+	line-height: 120%;
+	margin-right: 30px;
+}
+
+#color-chooser #instructions {
+	float: left;
+	width: 290px;
+
+}
+
+/* fonts */
+
+
+#color-toggle:hover {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#color-chooser h6 {
+	color: #444;
+	text-transform: uppercase;
+	font-size: 22px;
+	line-height: 22px;
+	margin: 10px 0;
+	padding-bottom: 5px;
+}
+
+/* layout */
+
+#color-chooser form {
+	margin: 0;
+	padding: 30px 0;
+	color: #999;
+}
+
+#color-chooser dl,
+#color-chooser dd {
+	padding: 0;
+	margin: 0;
+}
+
+#color-chooser dd.selected{
+	background-color: #333;
+}
+
+#color-chooser input.color {
+	width: 65px;
+	background: #131313;
+	border: 1px solid #333;
+	margin-bottom: 2px;
+	color: #ccc;
+	font-family: Verdana;
+	font-weight: normal;
+	font-size: 100%;
+	padding: 2px;
+	margin-top: 2px;
+}
+
+#color-chooser dt {
+	float:left;
+	width: 130px;
+	color: #999;
+	padding: 4px;
+}
+
+#color-chooser #color-selection select {
+	width: 208px;
+	overflow: hidden;
+	background: #111;
+	color: #999;
+	margin-bottom: 5px;
+}
+
+#color-chooser #preview b {
+	font-size: 5px;
+	padding: 0 2px;
+}
+
+#color-chooser #primary-bg {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+
+#color-chooser #primary-fg-1,#color-chooser #primary-fg-2,#color-chooser #secondary-bg-1, #color-chooser #secondary-fg-1, #color-chooser #secondary-bg-2, #color-chooser #secondary-fg-2, #color-chooser #secondary-bg-3, #color-chooser #secondary-fg-3, #color-chooser #tertiary-bg-1, #color-chooser #tertiary-fg-1, #color-chooser #image-overlay {
+	position: absolute;
+	overflow: hidden;
+}
+
+#color-chooser #primary-fg-1 {
+	top: 25px;
+	left: 49px;
+	width: 105px;
+	height: 12px;
+}
+
+#color-chooser #primary-fg-2 {
+	top: 44px;
+	left: 102px;
+	width: 50px;
+	height: 12px;
+}
+
+#color-chooser #secondary-bg-1 {
+	top: 22px;
+	left: 25px;
+	width: 21px;
+	height: 12px;	
+}
+
+#color-chooser #secondary-fg-1 {
+	top: 25px;
+	left: 26px;
+	width: 21px;
+	height: 12px;
+}
+
+#color-chooser #secondary-bg-2 {
+	top: 35px;
+	left: 29px;
+	width: 63px;
+	height: 86px;
+}
+
+#color-chooser #secondary-fg-2 {
+	top: 45px;
+	left: 33px;
+	width: 54px;
+	height: 70px;
+}
+
+#color-chooser #secondary-fg-2 b {
+	padding: 0;
+}
+
+#color-chooser #secondary-bg-3 {
+	top: 100px;
+	left: 100px;
+	width: 63px;
+	height: 86px;	
+}
+
+#color-chooser #secondary-fg-3 {
+	top: 107px;
+	left: 102px;
+	width: 50px;
+	height: 12px;
+}
+
+#color-chooser #tertiary-bg-1 {
+	top: 121px;
+	left: 29px;
+	width: 63px;
+	height: 12px;	
+}
+
+#color-chooser #tertiary-fg-1 {
+	top: 124px;
+	left: 33px;
+	width: 54px;
+	height: 70px;
+}
+
+#color-chooser #image-overlay {
+	background-image: url(../images/preview-demo.png);
+	width: 150px;
+	height: 150px;	
+}
+
+#color-chooser #instructions p {
+	margin: 0;
+}
+
+#color-chooser #apply-colors {
+	display: block;
+	background: url(../images/color-apply.png) 0 0 no-repeat;
+	width: 111px;
+	height: 34px;
+	line-height: 34px;
+	color: #fff;
+	text-align: center;
+	margin: 20px auto 0;
+	cursor: pointer;
+}
+
+#color-toggle span {
+	display: block;
+	padding-top: 5px;
+	text-align: right;
+	padding-right: 55px;
+	color: #ccc;
+}

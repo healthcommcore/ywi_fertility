@@ -1,0 +1,15 @@
+/*
+ * JPlayer for Joomla! 1.5
+ * Author: Max
+*/
+
+.jplayer {
+   clear: both;
+   text-align: center;
+   font-size: 10px;
+}
+.jplayer-box {
+}
+.jplayer-text {
+   padding: 3px;
+}
